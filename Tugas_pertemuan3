@@ -1,0 +1,31 @@
+program hitung_diskon;
+var 
+   totalbelanja, totalbayar:real;
+begin 
+   writeln('Masukkan total belanjaan:');
+   readln(totalbelanja);
+   if totalbelanja < 100000 then
+   begin
+      writeln('tidak ada diskon.');
+      totalbayar := totalbelanja;
+    end
+
+    else if (totalbelanja >= 100000) and (totalbelanja < 500000) then
+    begin
+       writeln('Anda mendapatkan diskon 10%.');
+       totalbayar := totalbelanja*0.9;
+    end
+
+    else if (totalbelanja >= 500000) and (totalbelanja < 1000000) then
+    begin
+        writeln('Anda mendapatkan diskon 20%.');
+        totalbayar := totalbelanja*0.8;
+    end
+    else
+    begin
+        writeln('Anda mendapatkan diskon 30%.');
+        totalbayar := totalbelanja*0.7;
+    end;
+        writeln('total yang harus dibayar setelah diskon:',totalbayar:0:2);
+    end.
+

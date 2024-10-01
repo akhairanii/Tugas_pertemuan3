@@ -1,0 +1,17 @@
+program ramalancuaca;
+var
+  suhu: integer;
+begin
+  writeln('Masukkan suhu dalam derajat celcius: ');
+  readln(suhu);
+  if suhu < 0 then
+    writeln('cuaca sangat dingin, pakailah baju yang tebal.')
+  else if (suhu >= 0) and (suhu <= 15) then
+    writeln('cuaca dingin, pakai baju ya.')
+  else if (suhu >=16) and (suhu<= 25) then
+    writeln('cuaca nyaman, enak untuk jalan jalan.')
+  else if (suhu >= 26) and (suhu <=35) then
+   writeln('cuaca hangat, hindari dehidrasi.')
+  else
+    writeln('cuaca sangat panas, hindari matahari.');
+end.

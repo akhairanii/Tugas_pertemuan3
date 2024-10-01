@@ -1,0 +1,27 @@
+program konversisuhu;
+uses crt;
+var
+  p: integer;
+  s, h: real;
+
+begin
+  clrscr;
+  writeln('1:c ke f, 2: f ke c, 3: c ke k, 4: k ke c');
+  write('pilih (1-4):');
+  readln(p);
+  write('Masukkan suhu:');
+  readln(s);
+
+  case p of
+    1: h := (s*9/5)+32;
+    2: h := (s-32)*9/5;
+    3: h := s+ 237.15;
+    4: h := s- 237.15;
+    else writeln('pilihan tidak valid.');
+    end;
+
+  if (p >= 1) and  (p <= 4) then
+  writeln('hasil:',h:0:2);
+  readln;
+end.
+ 

@@ -1,0 +1,22 @@
+program kalkulatorsederhana;
+var
+  pilihan: integer;
+  a, b: real;
+begin
+  writeln('1:tambah, 2:kurang, 3:kali, 4:bagi ');
+  readln(pilihan);
+  writeln('Masukkan dua angka:');
+  readln(a, b);
+
+  case pilihan of
+    1: writeln('Hasil: ',a+b:0:2);
+    2: writeln('Hasil: ', a-b:0:2);
+    3: writeln('Hasil:. ', a*b:0:2);
+    4: if b <>0 then
+       writeln('Hasil: ', a/b:0:2)
+       else
+       writeln('Error: pembagian dengan nol.');
+    else
+       writeln('pilihan tidak valid.');
+    end;
+end.
